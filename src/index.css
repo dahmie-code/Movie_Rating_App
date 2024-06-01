@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.movie {
+  /* background-color: #fff; */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s, color 0.5s;
+}
+
+.movie:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+h2 {
+  color: #2980b9;
+}
+
+input, select {
+  border: 1px solid #dfe6e9;
+  padding: 10px;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus {
+  border: 1px solid #2980b9;
+}
+
+button {
+  background-color: #2980b9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+
+.loader {
+  border-top-color: #3498db;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
