@@ -95,6 +95,7 @@ function RatingApp() {
     setSort(option);
   }
 
+    // Toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   }
