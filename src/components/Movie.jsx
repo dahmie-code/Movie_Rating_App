@@ -1,17 +1,21 @@
 import { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 
+// Movie component to display individual movie details and handle ratings
 function Movie({ movie, onRatingClick, darkMode }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
+// Handle click on rating stars
   const handleRatingClick = (rating) => {
     onRatingClick(movie.title, rating);
   };
 
+    // Toggle movie description expansion
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
 
+    // Render movie description with "Read more" and "Show less" functionality
   const renderDescription = () => {
     if (isExpanded) {
       return (

@@ -7,6 +7,7 @@ import SearchBar from './SearchBar';
 import SortDropdown from './SortDropdown';
 import LoadingSpinner from './LoadingSpinner';
 
+// RatingApp component for the main application
 function RatingApp() {
   const [movies, setMovies] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -14,7 +15,7 @@ function RatingApp() {
   const [isLoading, setIsLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
 
-
+  // Load movies and ratings data from Firebase
   useEffect(() => {
     async function loadMovies() {
       const moviesRef = ref(db, 'movies');
@@ -50,12 +51,14 @@ function RatingApp() {
     loadMovies();
   }, []);
 
+    // Calculate average rating from an array of ratings
   const calculateAverageRating = (ratings) => {
     if (ratings.length === 0) return 0;
     const totalRating = ratings.reduce((acc, rating) => acc + rating, 0);
     return totalRating / ratings.length;
   };
 
+    // Handle rating click and update the Firebase database
   const onRatingClick = async (movieTitle, rating) => {
     const ratingsRef = ref(db, `ratings/${movieTitle}`);
     try {
@@ -82,10 +85,12 @@ function RatingApp() {
     }
   };
 
+    // Handle search query change
   const handleSearch = (query) => {
     setSearchQuery(query);
   }
 
+    // Handle sort option change
   const handleSortChange = (option) => {
     setSort(option);
   }
@@ -94,6 +99,8 @@ function RatingApp() {
     setDarkMode(!darkMode);
   }
   
+    // Filter and sort movies based on search query and sort option
+
   const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(searchQuery.toLowerCase()))
 
   const sortedMovies = filteredMovies.sort((a, b) => {

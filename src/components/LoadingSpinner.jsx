@@ -1,3 +1,4 @@
+// LoadingSpinner component to show a spinner while content is loading
 const LoadingSpinner = () => {
     return (
       <div className="flex justify-center items-center h-full">

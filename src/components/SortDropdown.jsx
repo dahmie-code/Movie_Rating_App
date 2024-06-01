@@ -1,3 +1,4 @@
+// SortDropdown component for sorting movies
 function SortDropdown({ sortOption, onSortChange, darkMode }) {
   return (
     <div className="mb-4 md:mb-0">

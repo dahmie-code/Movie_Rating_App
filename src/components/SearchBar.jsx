@@ -1,3 +1,4 @@
+// SearchBar component for searching movies
 function SearchBar({ searchQuery, onSearchChange, darkMode }) {
   return (
     <div className={`flex-grow mb-4 md:mb-0 md:mr-4  ${darkMode ? 'bg-gray-800 text-white':'bg-white text-white'}`} >

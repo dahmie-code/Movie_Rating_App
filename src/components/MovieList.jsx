@@ -1,5 +1,6 @@
 import Movie from '../components/Movie';
 
+// MovieList component to display a list of movies
 function MovieList({ movies, onRatingClick, darkMode}) {
   // Filter out movies with an average rating of 0
   const filteredMovies = movies.filter(movie => movie.averageRating !== undefined);
