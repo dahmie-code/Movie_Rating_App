@@ -1,3 +1,4 @@
+import React from 'react';
 // SortDropdown component for sorting movies
 function SortDropdown({ sortOption, onSortChange, darkMode }) {
   return (

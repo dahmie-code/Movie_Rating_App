@@ -1,3 +1,4 @@
+import React from 'react';
 import Movie from '../components/Movie';
 
 // MovieList component to display a list of movies

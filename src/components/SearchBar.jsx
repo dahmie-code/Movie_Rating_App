@@ -1,3 +1,4 @@
+import React from 'react';
 // SearchBar component for searching movies
 function SearchBar({ searchQuery, onSearchChange, darkMode }) {
   return (

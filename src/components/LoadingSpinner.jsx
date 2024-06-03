@@ -1,3 +1,4 @@
+import React from 'react';
 // LoadingSpinner component to show a spinner while content is loading
 const LoadingSpinner = () => {
     return (
