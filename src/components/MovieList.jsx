@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Movie from '../components/Movie';
 
 // MovieList component to display a list of movies
@@ -18,11 +19,16 @@ function MovieList({ movies, onRatingClick, darkMode}) {
             onRatingClick={onRatingClick}
             numRatings={numRatings}
             darkMode={darkMode}
-          />
-        );
-      })}
-    </div>
+            />
+            );
+          })}
+        </div>
   );
-}
-
-export default MovieList;
+  
+    }
+    MovieList.propTypes = {
+      movies: PropTypes.array.isRequired,
+      darkMode: PropTypes.bool.isRequired,
+    };
+    
+    export default MovieList;

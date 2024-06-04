@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import { React, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 
 // Movie component to display individual movie details and handle ratings
